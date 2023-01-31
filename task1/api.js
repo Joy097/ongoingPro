@@ -92,9 +92,11 @@ function del(){
     const name = document.getElementById("nam").value.trim()
     let result = document.getElementById('result');
 
-    fetch('https://jsonplaceholder.typicode.com/posts/1', {
+    fetch(`https://jsonplaceholder.typicode.com/${name}/${id}`, {
   method: 'DELETE',
 });
-    .then((response) => (response.json()))
+    .then(() => {
+       return fetch(`https://jsonplaceholder.typicode.com/${name}`)
+    })
     .then((json) => result.innerHTML= add(json));
 }
