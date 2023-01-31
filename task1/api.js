@@ -88,15 +88,15 @@ function update(){
 }
 
 function del(){
-    const id = document.getElementById("id").value.trim()
-    const name = document.getElementById("nam").value.trim()
+    const id = document.getElementById("id0").value.trim()
+    const name = document.getElementById("nam0").value.trim()
     let result = document.getElementById('result');
 
     fetch(`https://jsonplaceholder.typicode.com/${name}/${id}`, {
-  method: 'DELETE',
+  method: 'DELETE'
 })
-    .then(() => {
-       return fetch(`https://jsonplaceholder.typicode.com/${name}`)
-    })
-    .then((json) => result.innerHTML= add(json));
+    
+    .then((jso) => jso.json())
+    .then((res) => console.log(res))
+    ;
 }
