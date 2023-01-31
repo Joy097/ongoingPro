@@ -94,7 +94,7 @@ function del(){
 
     fetch(`https://jsonplaceholder.typicode.com/${name}/${id}`, {
   method: 'DELETE',
-});
+})
     .then(() => {
        return fetch(`https://jsonplaceholder.typicode.com/${name}`)
     })
