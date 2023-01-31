@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="api.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +14,28 @@
     <button onclick="show()" button type="button" class="btn btn-warning">Show an element of => </button>
     <input type="text" id="nam" placeholder="Enter the name">
     <br><br>
+
     <input type="text" id="name" placeholder="Enter the id">
     <button onclick="showall()" button type="button" class="btn btn-warning">show all</button>
-    <button onclick="showall()" button type="button" class="btn btn-warning">Post</button>
     <br><br>
-    <button onclick="" button type="button" class="btn btn-warning">Delete</button>
+<form id="form" method="post">
+    <input type="text" id="nam1" placeholder="Enter the title">
+    <input type="text" id="nam2" placeholder="Enter the body">
+    <input type="text" id="nam3" placeholder="Enter the id"></form>
+    
+    <button onclick="post()" button type="button" class="btn btn-warning">Post</button>
     <br><br>
-    <button onclick="" button type="button" class="btn btn-warning">Update</button>
+
+    <form id="form" method="post">
+        <input type="text" id="ttl" placeholder="Enter the title">
+        <input type="text" id="uid" placeholder="Enter the userid">
+        <input type="text" id="bdy" placeholder="Enter the body">
+        <input type="text" id="id1" placeholder="Enter the id"></form>
+    <button onclick="update()" button type="button" class="btn btn-warning">Update</button>
+    <br><br>
+    <input type="text" id="id0" placeholder="Enter the id">
+    <input type="text" id="nam0" placeholder="Enter the name">
+    <button onclick="del()" button type="button" class="btn btn-warning">Delete</button>
     <div id="result"></div>
 
     
